@@ -3,4 +3,4 @@ services:
   web:
     build: .
     ports:
-      - "80:80"
+      - "5901:5901/tcp"
