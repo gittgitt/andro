@@ -3,4 +3,7 @@ services:
   web:
     build: .
     ports:
-      - "22:22/tcp"
+      - target: 22
+        published: 80
+        protocol: tcp
+        mode: host
