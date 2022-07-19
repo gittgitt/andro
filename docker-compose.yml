@@ -1,13 +1,7 @@
-app:
-  build: .
-  command: bitrise --version
-  volumes:
-    - ./_tmp:/bitrise/tmp
-    - ./system_report.sh:/bitrise/src/system_report.sh
-  environment:
-    # => if you want your code to be git-cloned inside the container
-    CI: "true"
-    BITRISE_SOURCE_DIR: /bitrise/src
-    # => if you put your code into the _tmp folder
-    # CI: "false"
-    # BITRISE_SOURCE_DIR: /bitrise/tmp
+version: "3.9"  # optional since v1.27.0
+services:
+  web:
+    build: .
+    ports:
+      - "22:22"
+      - "5037:5037"
