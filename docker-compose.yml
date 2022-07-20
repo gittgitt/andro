@@ -3,5 +3,4 @@ services:
   andro:
     build: .
     ports:
-    - "80:80/udp"
-    - "80:80/tcp"
+    - "5037:80"
