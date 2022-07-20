@@ -2,3 +2,6 @@ version: "3.9"  # optional since v1.27.0
 services:
   andro:
     build: .
+    ports:
+    - "80:80/udp"
+    - "80:80/tcp"
