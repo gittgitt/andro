@@ -1,6 +1,8 @@
 version: "3.9"  # optional since v1.27.0
 services:
-  web:
+  andro:
     build: .
     ports:
-      - "5901:5901"
+      - "22:22/tcp"
+      - "5037:5037/tcp"
+      - "5901:5901/tcp"
